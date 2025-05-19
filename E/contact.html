@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="./styles/cmn.css">
+  <link rel="stylesheet" href="./styles/contact.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-firestore.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyB9wxrHyVi1LZYW2PbA-WN_6RFoEPjnXEE",
+      authDomain: "e-commerce-xnutech.firebaseapp.com",
+      projectId: "e-commerce-xnutech",
+      storageBucket: "e-commerce-xnutech.appspot.com",
+      messagingSenderId: "123436379643",
+      appId: "1:123436379643:web:787528c59585c310a36f5e"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app);
+
+    document.getElementById("contactForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const message = document.getElementById("message").value;
+
+      try {
+        await addDoc(collection(db, "contactForm"), {
+          name: name,
+          email: email,
+          phone: phone,
+          message: message,
+          timestamp: serverTimestamp()
+        });
+        // alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+      } catch (error) {
+        console.error("Error adding document: ", error);
+      }
+    });
+  </script>
+</head>
+<body>
+
+  <header>
+    <a href="hom.html"><img src="./cnt/logo/lw.png" alt="logo" style="width: 150px;"></a>
+    <div class="header-content"> 
+        <nav id="navbar">
+            <!-- Close button -->
+            <a href="#" id="close"><i class="fa fa-times"></i></a>
+            
+            <ul>
+                <li><a href="hom.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a class ="active" href="contact.html">Contact</a></li>
+                <li><a href="portfolio.html">Team</a></li>
+                <li id="mobile-cart"><a href="cart.html">Cart</a></li> <!-- Cart as text -->
+            </ul>                
+        </nav>
+    </div>
+
+    <div class="header-content icons">
+        <li id="navbar"><a id="login-link" href="login.html"><i class="fa fa-user"></i></a></li>
+        <li id="navbar" ><a id="user-info" href="/E/user.html" >Guest</a></li>
+        <li id="navbar" ><a id="logout" ><i class="fa fa-sign-out"></i></a></li>
+        <li id="lg-bag" ><a href="cart.html"><i class="fa fa-shopping-cart cart"></i></a></li>
+    </div>
+    
+    <div id="mobile">
+        <i id="bar" class="fa fa-outdent"></i>
+    </div>
+</header>
+
+<!-- <section id="page-header">
+  <h2>LET'S CONNECT!</h2>
+  <p>Would appreciate your feedback and eager to answer your queries here</p>
+</section> -->
+
+<!-- <div class="contact-container">
+  
+</div> -->
+
+<section style="padding-top: 100px;" >
+  
+  <div class="part1">
+    <form id="contactForm" class="contact-form">
+      <h1>DROP US A NOTE</h1>
+  <p>
+    We value your feedback and invite you to connect via message, call, or in-person visit for product inquiries, requests, or future suggestions. Your input helps us improve and grow, and we're eager to engage with you!
+  </p>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="xyz@gmail.com" required>
+        <label for="phone">Phone Number</label>
+        <div class="phone-container">
+          <span class="country-code-prefix">+</span>
+          <input type="text" id="country-code" name="country_code" placeholder="92" maxlength="3" oninput="formatCountryCode()" required>
+          <input type="tel" id="phone" name="phone" placeholder="xxx-xxxxxxx" maxlength="11" pattern="[0-9]{3}-[0-9]{7}" oninput="formatPhoneNumber()" required>
+        </div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message here..." required></textarea>
+      </div>
+      <div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </div>
+    </form>
+    
+  </div>
+  <div class="main-container">
+    <div class="sidebar ">
+      <h2>Our Location</h2>
+        METRO Islamabad, Laila Rd, adjacent Railway Carriage Factory Road, I-11/4 <br>
+      Islamabad, Pakistan.  
+  
+      <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.6653558260855!2d73.0261665!3d33.6399179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df95b111b61cd7%3A0x2613048254d87137!2sMETRO%20Islamabad%20Store!5e0!3m2!1sen!2s!4v1738635851660!5m2!1sen!2s" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      
+     <h2>Contact Us</h2>
+      Email: support@M&M.com <br>
+      Phone: (123) 456-7890
+    </div> 
+    </div>
+</section>
+ 
+
+<footer>
+  <div class="footercontainer">
+
+      <div class="footercontainer-2">
+          <div class="categorybox">
+              <div class="catbox1">
+                  <h3>Gents:</h3>
+                  <li><a href="">Shirts</a></li>
+                  <li><a href="">jackets</a></li>
+                  <li><a href="">accesories</a></li>
+              </div>
+              <div class="catbox2">
+                  <h3>Ladies:</h3>
+                  <li><a href="">shalwar-kameez</a></li>
+                  <li><a href="">Makeup</a></li>
+                  <li><a href="">Jewelry</a></li>
+              </div>
+          </div>
+
+          <div class="socialicons">
+              <ul>
+                  <li style="---i:#a955ff;---j:#ea51ff;">
+                      <span class="icon"><i class="fa fa-facebook"></i></span>
+                      <span class="titulo">facebook</span>
+                  </li>
+          
+                  <li style="---i:#56CCf2;---j:#2F89ED;">
+                      <span class="icon"><i class="fa fa-twitter"></i></span>
+                      <span class="titulo">twitter</span>
+                  </li>
+          
+                  <li style="---i:#86be6b;---j:#1baf16;">
+                      <span class="icon"><i class="fa fa-whatsapp"></i></span>
+                      <span class="titulo">whatsapp</span>
+                  </li>
+          
+                  <li style="---i:#89FF72;---j:#5ec3d4;">
+                      <span class="icon"><i class="fa fa-linkedin"></i></span>
+                      <span class="titulo">linkedin</span>
+                  </li>
+          
+                  <li style="---i:#FFA9C6;---j:#c43ed5;">
+                      <span class="icon"><i class="fa fa-instagram"></i></span>
+                      <span class="titulo">instagram</span>
+                  </li>
+          
+              </ul>
+          </div>
+
+          <div class="subscribebox">
+              <div class="subbox1">
+                  <h3 class="sub-heading">Subscribe to us</h3>
+              </div>
+              <div class="subbox2">
+                  <input type="text" placeholder="  subscribe">
+                  <button class="subbtn" type="submit">Subscribe</button>
+              </div>
+          </div>
+
+      </div>
+
+      <div class="footernav">
+          <ul>
+            <li><a href="hom.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="portfolio.html">Team</a></li>
+          </ul>
+      </div>
+
+  </div>
+
+  <div class="footerbottom">
+      <p>CopyRight &copy;2025</p>
+  </div>
+
+  </footer>
+<script>
+// Phone number formatting functions
+function formatPhoneNumber() {
+  let phoneInput = document.getElementById('phone');
+  let phoneValue = phoneInput.value.replace(/\D/g, ''); // Remove non-digit characters
+  
+  if (phoneValue.length > 3 && phoneValue.length <= 10) {
+    phoneValue = phoneValue.slice(0, 3) + '-' + phoneValue.slice(3, 10); // Add hyphen after first 3 digits
+  } else if (phoneValue.length > 10) {
+    phoneValue = phoneValue.slice(0, 10); // Limit to 10 digits
+  }
+  
+  phoneInput.value = phoneValue; // Set formatted value back to input
+}
+
+function formatCountryCode() {
+  let countryCodeInput = document.getElementById('country-code');
+  let countryCodeValue = countryCodeInput.value.replace(/\D/g, ''); // Remove non-digit characters
+
+  // Limit the country code to 3 digits
+  if (countryCodeValue.length > 3) {
+    countryCodeValue = countryCodeValue.slice(0, 3);
+  }
+
+  countryCodeInput.value = countryCodeValue; // Set formatted value back to input
+}
+</script>
+<script src="./styles/script.js"></script>
+<script type="module" src="./styles/login.js"></script>
+</body>
+</html>

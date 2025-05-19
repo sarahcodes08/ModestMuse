@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/cmn.css">
+    <link rel="stylesheet" href="./styles/hom.css">
+    <link rel="stylesheet" href="./styles/shop.css">
+</head>
+
+<body>
+    <header>
+        <a href="hom.html"><img src="./cnt/logo/lw.png" alt="logo" style="width: 150px;"></a>
+        <div class="header-content"> 
+            <nav id="navbar">
+                <!-- Close button -->
+                <a href="#" id="close"><i class="fa fa-times"></i></a>
+                
+                <ul>
+                    <li><a class="active" href="hom.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="portfolio.html">Team</a></li>
+                    <li id="mobile-cart"><a href="cart.html">Cart</a></li>
+                </ul>                
+            </nav>
+        </div>
+    
+        <div class="header-content icons">
+            <li id="navbar"><a id="login-link" href="login.html"><i class="fa fa-user"></i></a></li>
+            <li id="navbar" ><a id="user-info" href="user.html" >Guest</a></li>
+            <li id="navbar" ><a id="logout" ><i class="fa fa-sign-out"></i></a></li>
+            <li id="lg-bag" ><a href="cart.html"><i class="fa fa-shopping-cart cart"></i></a></li>
+        </div>
+        
+        <div id="mobile">
+            <i id="bar" class="fa fa-outdent"></i>
+        </div>
+    </header>
+
+    <div class="slideshow-container"  style="padding-top: 100px;">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 6</div>
+          <img src="./cnt/header/w4.png" style="width:100%; ">
+          <div class="text">Festive Attire</div>
+          
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 6</div>
+            <img src="./cnt/header/m1.jpg" style="width:100%">
+            <div class="text">Ready to Wear</div>
+          </div>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 6</div>
+          <img src="./cnt/header/w-a.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 6</div>
+          <img src="./cnt/header/w3.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 6</div>
+            <img src="./cnt/header/m3.jpg" style="width:100%">
+            <div class="text"></div>
+          </div>
+          
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>       
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+          <!-- <span class="dot" onclick="currentSlide(5)"></span> 
+          <span class="dot" onclick="currentSlide(6)"></span>  -->
+        </div>
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+           
+           <section id="feature" class="section-p1">
+            <div class="fe-box">
+              <img src=".\cnt\imag\hom-feature-discount.png" alt="free-shipping">
+              <h6>Free Shipping</h6>  
+            </div>
+    
+            <div class="fe-box">
+                <img src=".\cnt\imag\hom-feature-shopping-app.png" alt="free-shipping">
+                <h6>Online Order</h6>  
+              </div>
+    
+            <div class="fe-box">
+                <img src=".\cnt\imag\hom-feature-mobile-pay.png" alt="free-shipping">
+                <h6>Pay Online</h6>  
+              </div>
+    
+            <div class="fe-box">
+                <img src=".\cnt\imag\hom-feature-gift.png" alt="free-shipping">
+                <h6>Send Gifts</h6>  
+              </div>
+    
+            <div class="fe-box">
+                <img src=".\cnt\imag\hom-feature-delivery-truck.png" alt="free-shipping">
+                <h6>Fast Delivery</h6>  
+              </div>
+    
+            <div class="fe-box">
+                <img src=".\cnt\imag\hom-feature-instant-support.png" alt="free-shipping">
+                <h6>24/7 Support</h6>  
+              </div>
+        </section>
+
+     
+
+    <section id="sm-banner">
+        <div class="banner-box">
+            <h4>WOMEN</h4>
+            <h5>find your style</h5>
+            <span>The best articles are on sale</span>
+            <button class="white" style="background-color: #fff;"><a href="shop.html" style="color: #000;">Learn More</a></button>
+        </div>
+        <div class="banner-box banner-box2">
+            <h4>MEN</h4>
+            <h5>get your favourite collection</h5>
+            <span>The best-selling products</span>
+            <button class="white" style="background-color: #fff;"><a href="shop2.html" style="color: #000;">View More</a></button>
+        </div>
+    </section>
+
+    <section id="banner3">
+        <div class="banner-box">
+            <h2>Lawn</h2>
+            <h3>Find exquisite fashion in jewellery</h3>
+        </div>
+        <div class="banner-box banner-box3">
+            <h2>Stitched</h2>
+            <h3>Spring and Summer</h3>
+        </div>
+        <div class="banner-box banner-box4">
+            <h2>Men</h2>
+            <h3>Trending Designs</h3>
+        </div>
+    </section>
+
+    <section id="banner3">
+        <div class="banner-box">
+            <h2>Lawn</h2>
+            <h3>Find exquisite fashion in jewellery</h3>
+        </div>
+        <div class="banner-box banner-box3">
+            <h2>Stitched</h2>
+            <h3>Spring and Summer</h3>
+        </div>
+        <div class="banner-box banner-box4">
+            <h2>Men</h2>
+            <h3>Trending Designs</h3>
+        </div>
+    </section>
+
+    
+<footer>
+            <div class="footercontainer">
+        
+                <div class="footercontainer-2">
+                    <div class="categorybox">
+                        <div class="catbox1">
+                            <h3>Gents:</h3>
+                            <li><a href="">Shirts</a></li>
+                            <li><a href="">jackets</a></li>
+                            <li><a href="">accesories</a></li>
+                        </div>
+                        <div class="catbox2">
+                            <h3>Ladies:</h3>
+                            <li><a href="">shalwar-kameez</a></li>
+                            <li><a href="">Makeup</a></li>
+                            <li><a href="">Jewelry</a></li>
+                        </div>
+                    </div>
+        
+                    <div class="socialicons">
+                        <ul>
+                            <li style="---i:#a955ff;---j:#ea51ff;">
+                                <span class="icon"><i class="fa fa-facebook"></i></span>
+                                <span class="titulo">facebook</span>
+                            </li>
+                    
+                            <li style="---i:#56CCf2;---j:#2F89ED;">
+                                <span class="icon"><i class="fa fa-twitter"></i></span>
+                                <span class="titulo">twitter</span>
+                            </li>
+                    
+                            <li style="---i:#86be6b;---j:#1baf16;">
+                                <span class="icon"><i class="fa fa-whatsapp"></i></span>
+                                <span class="titulo">whatsapp</span>
+                            </li>
+                    
+                            <li style="---i:#89FF72;---j:#5ec3d4;">
+                                <span class="icon"><i class="fa fa-linkedin"></i></span>
+                                <span class="titulo">linkedin</span>
+                            </li>
+                    
+                            <li style="---i:#FFA9C6;---j:#c43ed5;">
+                               
+                                <span class="icon"><i class="fa fa-instagram"></i></span>
+                                <span   class="titulo">instagram</span>
+                                
+                            </li>
+                    
+                        </ul>
+                    </div>
+        
+                    <div class="subscribebox">
+                        <div class="subbox1">
+                            <h3 class="sub-heading">Subscribe to us</h3>
+                        </div>
+                        <div class="subbox2">
+                            <input type="text" placeholder="  subscribe">
+                            <button class="subbtn" type="submit">Subscribe</button>
+                        </div>
+                    </div>
+        
+                </div>
+        
+                <div class="footernav">
+                    <ul>
+                        <li><a href="hom.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                       
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="portfolio.html">Team</a></li>
+                    </ul>
+                </div>
+        
+            </div>
+        
+            <div class="footerbottom">
+                <p>CopyRight &copy;2025</p>
+            </div>
+        
+            </footer>
+        
+
+            <script src="./styles/script.js"></script>
+            <script type="module" src="./styles/login.js"></script>
+            <script type= "module" src="./styles/cartdisplay.js"></script>
+            <script type="module" src="./styles/cart.js"></script>
+</body>
+
+
+</html>
+    
+
+        

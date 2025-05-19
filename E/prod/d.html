@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/cmn.css">
+    <link rel="stylesheet" href="../styles/hom.css">
+    <link rel="stylesheet" href="../styles/shop.css">
+    <link rel="stylesheet" href="../styles/sproduct.css">
+  
+</head>
+
+<body>
+
+    <header>
+        <a href="../hom.html"><img src="../cnt/logo/lw.png" alt="logo"></a>
+        <div class="header-content"> 
+            <nav>
+                <ul>
+                <li><a href="../hom.html">Home</a></li>
+                <li><a class="active" href="../shop.html" target="_self">Shop</a></li>
+                <li><a href="../about.html" target="_self">About</a></li>
+                <li><a href="../contact.html" target="_self">Contact</a></li>
+                <li><a href="../portfolio.html" target="_self">Team</a></li>
+                
+                <a href="#" id="close"><i class="fa fa-times"></i></a>
+                </ul>                
+            </nav>
+            <div id="mobile">
+                <a href="cart.html"><i class="fa fa-shopping-bag"></i></a>
+                <i id="bar" class="fa fa-outdent"></i>
+            </div>
+        </div>
+        <div class="header-content icons">
+                <li style="list-style: none;"><a id="login-link" href="../login.html" target="_self"><i class="fa fa-user"></i></a></li>
+                <li style="list-style: none;"><a id="user-info" href="../user.html" style="display:none;">Guest</a></li>
+                <li style="list-style: none;"><a id="logout" style="display:none;">Logout</a></li>
+                <li style="list-style: none;" id="lg-bag"><a href="../cart.html" target="_blank"><i id="cart-icon" class="fa fa-shopping-cart"></i></a></li>
+        </div>
+    </header>
+    
+    <section id="prod-details" class="section-p1">
+        <div class="single-pro-image">
+                <div class="zoom-container">
+                    <img src="../cnt/prod/d.jpg" width="100%" class="MainImg" id="MainImg" alt="">
+                    <div id="magnifier"></div>
+        </div>
+          
+        <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="../img/prod/d.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="../img/prod/d2.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="../img/prod/d.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="../img/prod/d2.jpg" width="100%" class="small-img" alt="">
+                </div>
+        </div>
+
+        </div>
+
+        <div class="single-pro-details">
+            <h6><a href="../shop.html">Shop</a> / Kurta</h6>
+            <h4>Women's 3PC</h4>
+            <h2>CAMBRIC PRINTED GREEN|3PC</h2>
+            <h2>Rs. 4000 PKR</h2>
+            
+            <select>
+                <option>Select Size</option>
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+            <span>Quantity:</span>
+            <button class="normal2"><i class="fa fa-minus"></i></button>  
+            <input type="number" min="0" max="40" placeholder="1" value="1" style="height: 31px; margin-right: 0;"> 
+            <button class="normal2"><i class="fa fa-plus"></i></button>
+            
+            <button class="normal" style="display: block; margin-top: 10px;">Add to Cart</button>  
+            <h4>Basic 3PC</h4>
+            <span>Digital Printed Light Linen Dupatta: 2.5 Meters
+                Digital Printed Light Linen Shirt: 3.02 Meters
+                Dyed Light Linen Trouser: 2.5 Meters
+                <br><br><br>
+                
+                * The stitch style and decorative accessories featured in the dress are for illustrative purposes only and are not included as part of the product.r</span>      
+        </div> 
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Similar Products</h2>
+        <p>Season Collection Available Now</p>
+        <div class="pro-container">
+            <div class="pro" onclick="window.location.href='/prod/a.html'">
+                <img src="/img/prod/a.png" alt="">
+                <div class="des">
+                    <span>Modest Muse</span>
+                    <h5>CAMBRIC EMBROIDED BLUE|3PC</h5>
+                    <div class="star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h4>PKR4000</h4>
+                </div>
+                <a href="#"><i class="fa fa-shopping-bag cart"></i></a>
+            </div>
+
+            <div class="pro" onclick="window.location.href='/prod/b.html'">
+                <img src="/img/prod/b.jpg" alt="">
+                <div class="des">
+                    <span>Modest Muse</span>
+                    <h5>CAMBRIC PRINTED GREEN|3PC</h5>
+                    <div class="star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h4>4000</h4>
+                </div>
+                <a href="#"><i class="fa fa-shopping-bag cart"></i></a>
+            </div>
+
+            <div class="pro" onclick="window.location.href='/prod/a.html'">
+                <img src="/img/prod/d.jpg" alt="">
+                <div class="des">
+                    <span>Modest Muse</span>
+                    <h5>CALM LIGHT GREEN FESTIVE|3PC</h5>
+                    <div class="star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h4>5000</h4>
+                </div>
+                <a href="#"><i class="fa fa-shopping-bag cart"></i></a>
+            </div>
+
+            <div class="pro" onclick="window.location.href='/prod/a.html'">
+                <img src="/img/prod/z.webp" alt="">
+                <div class="des">
+                    <span>Modest Muse</span>
+                    <h5>LAWN GREY EMBROIDED |3PC</h5>
+                    <div class="star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h4>PKR 3500</h4>
+                </div>
+                <a href="#"><i class="fa fa-shopping-bag cart"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div class="newstext">
+            <h4>Sign Up for Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span> </p>
+        </div>
+        <div class="form">
+            <input type="email" placeholder="Your email address">
+            <button>Sign Up</button>
+        </div>
+        </section>
+
+        
+        <footer>
+            <div class="footercontainer">
+        
+                <div class="footercontainer-2">
+                    <div class="categorybox">
+                        <div class="catbox1">
+                            <h3>Gents:</h3>
+                            <li><a href="">Shirts</a></li>
+                            <li><a href="">jackets</a></li>
+                            <li><a href="">accesories</a></li>
+                        </div>
+                        <div class="catbox2">
+                            <h3>Ladies:</h3>
+                            <li><a href="">shalwar-kameez</a></li>
+                            <li><a href="">Makeup</a></li>
+                            <li><a href="">Jewelry</a></li>
+                        </div>
+                    </div>
+        
+                    <div class="socialicons">
+                        <ul>
+                            <li style="---i:#a955ff;---j:#ea51ff;">
+                                <span class="icon"><i class="fa fa-facebook"></i></span>
+                                <span class="titulo">facebook</span>
+                            </li>
+                    
+                            <li style="---i:#56CCf2;---j:#2F89ED;">
+                                <span class="icon"><i class="fa fa-twitter"></i></span>
+                                <span class="titulo">twitter</span>
+                            </li>
+                    
+                            <li style="---i:#86be6b;---j:#1baf16;">
+                                <span class="icon"><i class="fa fa-whatsapp"></i></span>
+                                <span class="titulo">whatsapp</span>
+                            </li>
+                    
+                            <li style="---i:#89FF72;---j:#5ec3d4;">
+                                <span class="icon"><i class="fa fa-linkedin"></i></span>
+                                <span class="titulo">linkedin</span>
+                            </li>
+                    
+                            <li style="---i:#FFA9C6;---j:#c43ed5;">
+                                <span class="icon"><i class="fa fa-instagram"></i></span>
+                                <span class="titulo">instagram</span>
+                            </li>
+                    
+                        </ul>
+                    </div>
+        
+                    <div class="subscribebox">
+                        <div class="subbox1">
+                            <h3 class="sub-heading">Subscribe to us</h3>
+                        </div>
+                        <div class="subbox2">
+                            <input type="text" placeholder="  subscribe">
+                            <button class="subbtn" type="submit">Subscribe</button>
+                        </div>
+                    </div>
+        
+                </div>
+        
+                <div class="footernav">
+                    <ul>
+                        <li><a href="../hom.html">Home</a></li>
+                        <li><a href="../shop.html">Shop</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html" target="_blank">Contact</a></li>
+                        <li><a href="../portfolio.html" target="_blank">Team</a></li>
+                    </ul>
+                </div>
+        
+            </div>
+        
+            <div class="footerbottom">
+                <p>CopyRight &copy;2025</p>
+            </div>
+        
+            </footer>
+      
+            <script src="../styles/script.js"></script>
+            <script type="module" src="../styles/cart.js"></script>
+            <script type="module" src="../styles/login.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+        const mainImg = document.getElementById("MainImg");
+        const magnifier = document.getElementById("magnifier");
+    
+        mainImg.addEventListener("mousemove", (e) => {
+            magnifier.style.display = "block";
+            
+            // Get bounding box of the image
+            let rect = mainImg.getBoundingClientRect();
+            let x = e.clientX - rect.left;
+            let y = e.clientY - rect.top;
+    
+            // Adjust for magnifier position
+            let magnifierX = x - magnifier.offsetWidth / 2;
+            let magnifierY = y - magnifier.offsetHeight / 2;
+    
+            // Prevent overflow
+            magnifierX = Math.max(0, Math.min(magnifierX, rect.width - magnifier.offsetWidth));
+            magnifierY = Math.max(0, Math.min(magnifierY, rect.height - magnifier.offsetHeight));
+    
+            magnifier.style.left = `${magnifierX}px`;
+            magnifier.style.top = `${magnifierY}px`;
+            
+            // Set background image to zoomed version of main image
+            magnifier.style.backgroundImage = `url('${mainImg.src}')`;
+            
+            // Adjust background position for zoom effect
+            let bgX = (x / rect.width) * 100;
+            let bgY = (y / rect.height) * 100;
+            magnifier.style.backgroundPosition = `${bgX}% ${bgY}%`;
+        });
+    
+        // Hide magnifier when cursor leaves image
+        mainImg.addEventListener("mouseleave", () => {
+            magnifier.style.display = "none";
+        });
+    });
+    
+            </script>
+            <script src="../styles/script.js"></script>
+            <script type= "module" src="../styles/cartdisplay.js"></script>
+</body>
+
+
+</html>

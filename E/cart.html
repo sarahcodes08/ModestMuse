@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="icon" type="image/x-icon" href="/E/img/logo/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/cmn.css">
+    <link rel="stylesheet" href="./styles/cart.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="hom.html"><img src="./cnt/logo/lw.png" alt="logo" style="width: 150px;"></a>
+        <div class="header-content"> 
+            <nav id="navbar">
+                <!-- Close button -->
+                <a href="#" id="close"><i class="fa fa-times"></i></a>
+                
+                <ul>
+                    <li><a  href="hom.html">Home</a></li>
+                    <li><a  href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="portfolio.html">Team</a></li>
+                    <li id="mobile-cart"><a class="active" href="cart.html">Cart</a></li> <!-- Cart as text -->
+                </ul>                
+            </nav>
+        </div>
+    
+        <div class="header-content icons">
+            <li id="navbar"><a id="login-link" href="login.html"><i class="fa fa-user"></i></a></li>
+            <li id="navbar" ><a id="user-info" href="user.html" >Guest</a></li>
+            <li id="navbar" ><a id="logout" ><i class="fa fa-sign-out"></i></a></li>
+            <li id="lg-bag" ><a href="cart.html"><i class="fa fa-shopping-cart cart"></i></a></li>
+        </div>
+        
+        <div id="mobile">
+            <i id="bar" class="fa fa-outdent"></i>
+        </div>
+    </header>
+
+    <section id="page-header">
+        <h2>My Bag</h2>
+        <p>Here are the items that you have grabbed </p>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>   
+                    <td>Product</td> 
+                    <td>Size</td>   
+                    <td>Price</td>              
+                    <td>Quantity</td>    
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </section>
+
+    <section id="cart-add" class="section-p1">
+            
+            <div id="coupon">
+                <h3>Apply Coupon</h3>
+                <div>
+                <input type="text" id="couponInput" placeholder="Enter Coupon Code">
+                <button id="applyCoupon" class="normal">Apply</button>
+                <div id="appliedCoupon"></div>  <!-- This will hold the applied coupon badge -->
+            </div>
+            <p>*you can apply only one coupon at a time</p>
+            </div>
+            
+           
+            <div id="subtotal">
+                <h3>Cart Totals</h3>
+                <table>
+                    <tr>
+                        <td>Cart Subtotal</td>
+                        <td>PKR </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Shipping</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td><strong>PKR </strong></td>
+                    </tr>
+                </table>
+                <button class="normal"><strong>Clear Cart</strong></button>
+               <button id="confirmOrderBtn" class="normal">Confirm Order</button>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="footercontainer">
+        
+                <div class="footercontainer-2">
+                    <div class="categorybox">
+                        <div class="catbox1">
+                            <h3>Gents:</h3>
+                            <li><a href="">Shirts</a></li>
+                            <li><a href="">jackets</a></li>
+                            <li><a href="">accesories</a></li>
+                        </div>
+                        <div class="catbox2">
+                            <h3>Ladies:</h3>
+                            <li><a href="">shalwar-kameez</a></li>
+                            <li><a href="">Makeup</a></li>
+                            <li><a href="">Jewelry</a></li>
+                        </div>
+                    </div>
+        
+                    <div class="socialicons">
+                        <ul>
+                            <li style="---i:#a955ff;---j:#ea51ff;">
+                                <span class="icon"><i class="fa fa-facebook"></i></span>
+                                <span class="titulo">facebook</span>
+                            </li>
+                    
+                            <li style="---i:#56CCf2;---j:#2F89ED;">
+                                <span class="icon"><i class="fa fa-twitter"></i></span>
+                                <span class="titulo">twitter</span>
+                            </li>
+                    
+                            <li style="---i:#86be6b;---j:#1baf16;">
+                                <span class="icon"><i class="fa fa-whatsapp"></i></span>
+                                <span class="titulo">whatsapp</span>
+                            </li>
+                    
+                            <li style="---i:#89FF72;---j:#5ec3d4;">
+                                <span class="icon"><i class="fa fa-linkedin"></i></span>
+                                <span class="titulo">linkedin</span>
+                            </li>
+                    
+                            <li style="---i:#FFA9C6;---j:#c43ed5;">
+                                <span class="icon"><i class="fa fa-instagram"></i></span>
+                                <span class="titulo">instagram</span>
+                            </li>
+                    
+                        </ul>
+                    </div>
+        
+                    <div class="subscribebox">
+                        <div class="subbox1">
+                            <h3 class="sub-heading">Subscribe to us</h3>
+                        </div>
+                        <div class="subbox2">
+                            <input type="text" placeholder="  subscribe">
+                            <button class="subbtn" type="submit">Subscribe</button>
+                        </div>
+                    </div>
+        
+                </div>
+        
+                <div class="footernav">
+                    <ul>
+                        <li><a href="hom.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html" target="_blank">Contact</a></li>
+                        <li><a href="portfolio.html" target="_blank">Team</a></li>
+                    </ul>
+                </div>
+        
+            </div>
+        
+            <div class="footerbottom">
+                <p>CopyRight &copy;2025</p>
+            </div>
+            </footer>
+        
+
+    <script src="./styles/script.js"></script>
+    <script type= "module" src="./styles/cartdisplay.js"></script>
+    <script type= "module" src="./styles/login.js"></script>
+    <script type="module" src="./styles/cart.js"></script>
+</body>
+
+
+</html>

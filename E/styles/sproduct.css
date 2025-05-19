@@ -1,0 +1,109 @@
+.zoom-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Adjust as needed */
+    overflow: hidden;
+    cursor: crosshair;
+}
+
+/* Ensuring the main image is responsive */
+.MainImg {
+    width: 100%;
+    display: block;
+}
+
+/* Styling for the magnifier (zoom effect) */
+#magnifier {
+    position: absolute;
+    width: 150px; /* Size of zoomed area */
+    height: 150px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    background-repeat: no-repeat;
+    background-size: 200% auto; /* Zoom level */
+    display: none;
+    pointer-events: none;
+    border-radius: 50%; /* Circular zoom effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#prod-details {
+    display: flex;
+    margin-top: 20px;
+}
+
+
+#prod-details .single-pro-image {
+    width: 35% !important;
+    margin-right: 50px;
+}
+
+#prod-details .small-img-group {
+    display: flex;
+    gap: 3px;
+    justify-content: space-between;
+}
+
+#prod-details.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#prod-details .single-pro-details {
+    width: 50%;
+    padding-top: 30px;
+}
+
+#prod-details .single-pro-details h4 {
+    padding: 40px 0 20px 0;
+}
+
+#prod-details .single-pro-details h2 {
+    font-size: 26px;
+}
+
+#prod-details .single-pro-details select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#prod-details .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+
+}
+
+#prod-details .single-pro-details button {
+    background-color: #b19d7c;
+    color: #fff;
+}
+#prod-details .single-pro-details button:hover {
+    background-color: #8d7d64;
+    color: #fff;
+}
+#prod-details .single-pro-details input:focus{
+    outline: none;
+}
+
+#prod-details .single-pro-details span {
+    line-height: 25px;
+    color: #222;
+}
+
+@media (max-width: 477px) {
+    #prod-details {
+        display: flex;
+        flex-direction: column;
+    }
+    #prod-details .single-pro-image {
+        width: 100%;
+        margin-right: 0px;
+    }
+    #prod-details .single-pro-details {
+        width: 100%;
+    }
+}
+
